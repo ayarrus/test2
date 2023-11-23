@@ -1,0 +1,68 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="#04a0d0">
+      <mat-grid-list cols="2" rowHeight="50px">
+        <mat-grid-tile>
+          <ion-menu-button menu="firstMenu" color="white"></ion-menu-button>
+          <ion-title>
+            <ion-img src="assets/img/ASSA ABLOY White.svg" style="width: 40%; margin: 10px;"></ion-img>
+          </ion-title>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div style="margin-inline-start:auto;">
+            <button mat-button (click)="logout()">
+              <mat-label style="color: white; padding-right: 5px;">Salir</mat-label>
+              <mat-icon style="color: white;">logout</mat-icon>
+            </button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <div class="row">
+      <mat-grid-list cols="4" rowHeight="175px">
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title>
+              Reportados Ult. 24hs
+            </mat-card-title>
+            <mat-card-content>
+              {{Last24Hs}}
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title>
+              Online
+            </mat-card-title>
+            <mat-card-content>
+              {{Online}}
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title>
+              Offline Ult. 5 min.
+            </mat-card-title>
+            <mat-card-content>
+              {{OfflineLast5Mins}}
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title>
+              Offline Mas de 5 min.
+            </mat-card-title>
+            <mat-card-content>
+              {{OfflineMoreThan5Mins}}
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</ion-content>

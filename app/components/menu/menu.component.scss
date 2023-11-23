@@ -1,0 +1,34 @@
+ion-menu {
+    --ion-background-color: var(--ion-color-secondary);
+    --ion-text-color: var(--ion-color-segundary-contrast);
+    width: 20%;
+
+    ion-toolbar {
+        --background: #04a0d0;
+
+        ion-title {
+            text-align: -webkit-center;
+        }
+    }
+
+    ion-list {
+        /* optional, but it needs when you use gradient as a background color.*/
+        background: transparent;
+    }
+
+    .ion-menu-down {
+        position: absolute;
+        padding-block-end: 25px;
+        width: 100%;
+        bottom: 0;
+    }
+
+    ion-item:hover {
+        --background: rgba(56, 129, 224, 0.06) !important;
+        cursor: pointer;
+    }
+}
+
+.logo-header {
+    width: 50%;
+}

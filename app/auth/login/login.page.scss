@@ -1,0 +1,43 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+  
+}
+
+.signin-content {
+  padding: 60px 1rem;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+//NUEVO
+
+/* config.css */
+
+.auth-form {
+  // background: #235085;
+  background: -prefix-linear-gradient(left, #235085, rgb(190, 216, 247));
+  background: linear-gradient(to right, #235085, rgb(190, 216, 247));
+}
+
+.overlay{
+  height:100vh;
+  width:100%;
+  background-color:rgba(0, 0, 0, 0.286);
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}

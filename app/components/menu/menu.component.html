@@ -1,0 +1,26 @@
+<ion-menu contentId="main-content" menuId="firstMenu"  side="start" type="push">
+  <ion-header>
+    <ion-toolbar>
+      <!-- <ion-title><img src="assets/img/ASSA ABLOY Black.svg" class="logo-header" /> </ion-title> -->
+      <ion-buttons slot="start">
+        <ion-menu-button>
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content scroll="false" color="secondary">
+    <ion-list class="ion-list-menu">
+      <ion-list-header>
+        <h2>Menú</h2>
+      </ion-list-header>
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+        <ion-item (click)="nav(p)">
+          <ion-label>
+            {{p.title}}
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

@@ -1,0 +1,33 @@
+<ion-content>
+  <form #f="ngForm" novalidate [formGroup]="form" class="auth-form">
+    <div class="overlay" *ngIf="loading">
+      <div class="center">
+        <mat-spinner style="margin:0 auto;"></mat-spinner>
+      </div>
+    </div>
+    <div class="center">
+      <mat-card>
+        <mat-card-content>
+          <p>Inicia sesión para continuar</p>
+          <mat-form-field class="full-width-input">
+            <mat-label>Email</mat-label>
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input matInput type="email" formControlName="email">
+            <!-- <mat-error *ngIf="isFieldInvalid('userName')">
+            Please inform your user name
+          </mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="full-width-input">
+            <mat-label>Contraseña</mat-label>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" (click)="onSubmit(f)">Login</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </form>
+</ion-content>
